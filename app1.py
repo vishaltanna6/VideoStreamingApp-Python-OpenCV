@@ -1,5 +1,4 @@
 import cv2, socket, pickle, os,threading,subprocess
-# def main():
 def send():
     s=socket.socket(socket.AF_INET , socket.SOCK_DGRAM)
     s.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 10000000)
@@ -40,9 +39,8 @@ def recv():
             break
     cv2.destroyAllWindows()
 
-# main()
 
 t1 = threading.Thread(target=send)
 t2 = threading.Thread(target=recv)
 t1.start()
-# t2.start()
+t2.start
